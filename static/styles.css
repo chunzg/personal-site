@@ -132,10 +132,6 @@ footer {
   padding-bottom: 1rem;
 }
 
-footer a:hover {
-  font-style: italic;
-}
-
 /* mobile */
 @media only screen and (max-width: 480px) {
   * {
