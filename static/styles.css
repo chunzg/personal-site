@@ -77,15 +77,18 @@ h1 {
 
 .square-side.back {
   transform: rotateY(-180deg);
+  -webkit-transform: -webkit-rotateY(-180deg);
   background-color: green;
 }
 
 .square:hover .square-side.front {
   transform: rotateY(180deg);
+  -webkit-transform: -webkit-rotateY(180deg);
 }
 
 .square:hover .square-side.back {
   transform: rotateY(0deg);
+  -webkit-transform: -webkit-rotateY(0deg);
 }
 
 .circle {
@@ -96,6 +99,7 @@ h1 {
   z-index: 1;
   border-radius: 50%;
   transform: translateY(50%);
+  -webkit-transform: -webkit-translateY(50%);
 }
 
 .lines {
