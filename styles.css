@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "ABC Arizona";
+  src: url("ABCArizonaFlare-ThinItalic-Trial.otf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "ABC Arizona";
+}
+
+body {
+  background-color: bisque;
+}
+
+.font-lg {
+  font-size: 5rem;
+}
+
+.font-md {
+  font-size: 2.5rem;
+}
+
+.font-sm {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  /* text-shadow: 0 0 3px #ffffff, 0 0 5px #ffffff; */
+}
+
+.stack > * + * {
+  margin-top: 7rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* https://www.30secondsofcode.org/css/s/rotating-card */
+.shapes {
+  display: grid;
+  perspective: 150rem;
+  max-width: 80%;
+  margin: auto;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  align-items: center;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+
+main {
+  padding-top: 5rem;
+}
+
+.circle, .square {
+  width: 10rem;
+  height: 10rem;
+}
+
+.triangle {
+  height: 50%;
+}
+
+.circle-side {
+  backface-visibility: hidden;
+  width: 10rem;
+  height: 10rem;
+  transition: all .8s ease;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.square-side {
+  backface-visibility: hidden;
+  width: 10rem;
+  height: 10rem;
+  transition: all .8s ease;
+  position: absolute;
+}
+
+.triangle-side {
+  backface-visibility: hidden;
+  width: 0;
+  height: 0;
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  transition: all .8s ease;
+  position: absolute;
+}
+
+.circle-side.back,
+.square-side.back {
+  transform: rotateY(-180deg);
+  background-color: green;
+  display: flex;
+  justify-content: center;
+}
+
+.triangle-side.back {
+  transform: rotateY(-180deg);
+  border-bottom: 5rem solid green;
+  display: flex;
+  justify-content: center;
+}
+
+.circle-side.front,
+.square-side.front {
+  background-color:red;
+  display: flex;
+  justify-content: center;
+}
+
+.triangle-side.front {
+  border-bottom: 5rem solid red;
+  display: flex;
+  justify-content: center;
+}
+
+.circle:hover .circle-side.front,
+.square:hover .square-side.front,
+.triangle:hover .triangle-side.front {
+  transform: rotateY(180deg);
+}
+
+.circle:hover .circle-side.back,
+.square:hover .square-side.back,
+.triangle:hover .triangle-side.back {
+  transform: rotateY(0deg);
+}
+
