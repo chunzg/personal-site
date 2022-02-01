@@ -11,14 +11,15 @@
 
 html {
   background-color: red;
+  height: 100%;
+  padding: 1rem;
 }
 
 body {
-  margin: 1rem;
   background-color: bisque;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  height: 100%;
 }
 
 .font-md {
@@ -137,7 +138,7 @@ footer {
 }
 
 /* mobile */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 530px) {
   * {
     box-sizing: initial;
   }
